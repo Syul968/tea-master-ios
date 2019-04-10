@@ -66,9 +66,9 @@
         <!--Teas-->
         <scene sceneID="ag7-95-jhM">
             <objects>
-                <viewController id="zDy-ZV-1b6" sceneMemberID="viewController">
+                <viewController id="zDy-ZV-1b6" customClass="TeasController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jUG-tf-ytZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFB-Z2-Owx">
@@ -82,7 +82,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="biC-Kk-peg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Teas" largeTitleDisplayMode="always" id="e05-PT-kZm"/>
+                    <navigationItem key="navigationItem" title="Teas" largeTitleDisplayMode="always" id="e05-PT-kZm">
+                        <rightBarButtonItems>
+                            <barButtonItem image="Nav Settings" id="uQh-mx-D6n">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="DX0-8M-quY">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0OR-eK-Ywv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,9 +100,9 @@
         <!--Brew-->
         <scene sceneID="GJn-RU-dxX">
             <objects>
-                <viewController id="V2A-D2-AmY" sceneMemberID="viewController">
+                <viewController id="V2A-D2-AmY" customClass="BrewController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AkU-XL-erS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osR-fh-43h">
@@ -107,7 +116,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1Ap-g1-eR6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Brew" id="fLU-Fx-uEc"/>
+                    <navigationItem key="navigationItem" title="Brew" id="fLU-Fx-uEc">
+                        <barButtonItem key="rightBarButtonItem" image="Nav Settings" id="XCg-kv-WA5">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyc-oI-jmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,9 +129,9 @@
         <!--Timer-->
         <scene sceneID="FjP-qu-zrE">
             <objects>
-                <viewController id="YOS-Wj-9xq" sceneMemberID="viewController">
+                <viewController id="YOS-Wj-9xq" customClass="TimerController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2vU-uQ-T2l">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u9-j5-ZyL">
@@ -132,7 +145,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yLX-Ub-ALa"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Timer" id="PVH-Se-aEB"/>
+                    <navigationItem key="navigationItem" title="Timer" id="PVH-Se-aEB">
+                        <barButtonItem key="rightBarButtonItem" image="Nav Settings" id="rcu-Mu-03f">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCO-x0-Ptk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,8 +161,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LaI-qm-ue3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EiN-Pb-UBu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="f5J-Xg-2k1" kind="relationship" relationship="viewControllers" id="hsH-DT-slG"/>
@@ -161,11 +180,15 @@
         <scene sceneID="20v-Of-9QC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f5J-Xg-2k1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teas" image="Teas icon" id="cCx-ZR-gVg"/>
+                    <tabBarItem key="tabBarItem" title="Teas" image="Tab Teas" selectedImage="Tab Teas" id="cCx-ZR-gVg"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K6I-b1-ugb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="K6I-b1-ugb">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.45490196078431372" green="0.69803921568627447" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -180,11 +203,15 @@
         <scene sceneID="rlz-s1-voh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bbu-W7-LXj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Brew" id="5mk-YT-BXm"/>
+                    <tabBarItem key="tabBarItem" title="Brew" image="Tab Brew" selectedImage="Tab Brew" id="5mk-YT-BXm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D0f-cx-pmz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="D0f-cx-pmz">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -199,11 +226,15 @@
         <scene sceneID="5ny-MV-KD3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gco-GP-pPr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Timer" id="bUs-Yh-Lnj"/>
+                    <tabBarItem key="tabBarItem" title="Timer" image="Tab Timer" selectedImage="Tab Timer" id="bUs-Yh-Lnj"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2L1-VH-cBP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2L1-VH-cBP">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -217,6 +248,9 @@
     </scenes>
     <resources>
         <image name="Logo" width="1200" height="1200"/>
-        <image name="Teas icon" width="900" height="600"/>
+        <image name="Nav Settings" width="25" height="25"/>
+        <image name="Tab Brew" width="36.5" height="25"/>
+        <image name="Tab Teas" width="25" height="25"/>
+        <image name="Tab Timer" width="25" height="25"/>
     </resources>
 </document>

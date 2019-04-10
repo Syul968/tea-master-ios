@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD73225E76FA0079BD05 /* TeasController.swift */; };
+		C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD75225E9DCA0079BD05 /* BrewController.swift */; };
+		C443FD78225E9E010079BD05 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD77225E9E010079BD05 /* TimerController.swift */; };
 		C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3240223F362400F764AB /* AppDelegate.swift */; };
 		C4DC3243223F362400F764AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3242223F362400F764AB /* ViewController.swift */; };
 		C4DC3246223F362400F764AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3244223F362400F764AB /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C443FD73225E76FA0079BD05 /* TeasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeasController.swift; sourceTree = "<group>"; };
+		C443FD75225E9DCA0079BD05 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
+		C443FD77225E9E010079BD05 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C4DC323D223F362400F764AB /* Tea Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tea Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DC3240223F362400F764AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DC3242223F362400F764AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,9 @@
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
 				C4DC3242223F362400F764AB /* ViewController.swift */,
 				C4DC3244223F362400F764AB /* Main.storyboard */,
+				C443FD77225E9E010079BD05 /* TimerController.swift */,
+				C443FD75225E9DCA0079BD05 /* BrewController.swift */,
+				C443FD73225E76FA0079BD05 /* TeasController.swift */,
 				C4DC3247223F362500F764AB /* Assets.xcassets */,
 				C4DC3249223F362500F764AB /* LaunchScreen.storyboard */,
 				C4DC324C223F362500F764AB /* Info.plist */,
@@ -137,6 +146,9 @@
 			files = (
 				C4DC3243223F362400F764AB /* ViewController.swift in Sources */,
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
+				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
+				C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */,
+				C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
