@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LaI-qm-ue3">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,8 +63,160 @@
             </objects>
             <point key="canvasLocation" x="61.600000000000001" y="55.322338830584712"/>
         </scene>
+        <!--Teas-->
+        <scene sceneID="ag7-95-jhM">
+            <objects>
+                <viewController id="zDy-ZV-1b6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jUG-tf-ytZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFB-Z2-Owx">
+                                <rect key="frame" x="142" y="274" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="biC-Kk-peg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Teas" largeTitleDisplayMode="always" id="e05-PT-kZm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0OR-eK-Ywv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="1635"/>
+        </scene>
+        <!--Brew-->
+        <scene sceneID="GJn-RU-dxX">
+            <objects>
+                <viewController id="V2A-D2-AmY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AkU-XL-erS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osR-fh-43h">
+                                <rect key="frame" x="141" y="274" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1Ap-g1-eR6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Brew" id="fLU-Fx-uEc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cyc-oI-jmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="1634"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="FjP-qu-zrE">
+            <objects>
+                <viewController id="YOS-Wj-9xq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2vU-uQ-T2l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u9-j5-ZyL">
+                                <rect key="frame" x="138" y="274" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yLX-Ub-ALa"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="PVH-Se-aEB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCO-x0-Ptk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="1634"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xGp-rG-kUK">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LaI-qm-ue3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EiN-Pb-UBu">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="f5J-Xg-2k1" kind="relationship" relationship="viewControllers" id="hsH-DT-slG"/>
+                        <segue destination="Bbu-W7-LXj" kind="relationship" relationship="viewControllers" id="0UX-sL-Yus"/>
+                        <segue destination="gco-GP-pPr" kind="relationship" relationship="viewControllers" id="5cW-Bu-ZbB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfU-m4-cF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751.875" y="54.929577464788736"/>
+        </scene>
+        <!--Teas-->
+        <scene sceneID="20v-Of-9QC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f5J-Xg-2k1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Teas" image="Teas icon" id="cCx-ZR-gVg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K6I-b1-ugb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zDy-ZV-1b6" kind="relationship" relationship="rootViewController" id="Z1Q-N2-JwG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tpG-Go-bbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="884.15492957746483"/>
+        </scene>
+        <!--Brew-->
+        <scene sceneID="rlz-s1-voh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bbu-W7-LXj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Brew" id="5mk-YT-BXm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D0f-cx-pmz">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V2A-D2-AmY" kind="relationship" relationship="rootViewController" id="aL4-8G-Hib"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEC-Nd-Sxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="883"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="5ny-MV-KD3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gco-GP-pPr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" id="bUs-Yh-Lnj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2L1-VH-cBP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YOS-Wj-9xq" kind="relationship" relationship="rootViewController" id="yN8-qj-u5R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5U-SS-u0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434.375" y="880.9859154929577"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="120" height="120"/>
+        <image name="Logo" width="1200" height="1200"/>
+        <image name="Teas icon" width="900" height="600"/>
     </resources>
 </document>
