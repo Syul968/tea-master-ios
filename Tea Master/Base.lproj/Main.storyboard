@@ -64,38 +64,90 @@
             <point key="canvasLocation" x="61.600000000000001" y="55.322338830584712"/>
         </scene>
         <!--Teas-->
-        <scene sceneID="ag7-95-jhM">
+        <scene sceneID="YOn-mO-Z0a">
             <objects>
-                <viewController id="zDy-ZV-1b6" customClass="TeasController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jUG-tf-ytZ">
+                <tableViewController id="JTh-Aa-rs0" customClass="TeaTableViewController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9T6-PV-4Qe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFB-Z2-Owx">
-                                <rect key="frame" x="142" y="274" width="36" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="biC-Kk-peg"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Teas" largeTitleDisplayMode="always" id="e05-PT-kZm">
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TeaTableViewCell" id="1zf-9C-hgy" customClass="TeaTableViewCell" customModule="Tea_Master" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1zf-9C-hgy" id="gwq-de-cW7">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whittard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-IL-RWL">
+                                            <rect key="frame" x="16" y="11" width="288" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tippy Assam" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27L-1A-Etv">
+                                            <rect key="frame" x="16" y="40" width="160" height="21.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="160" id="4xD-DN-MPg"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-U7-hcU" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
+                                            <rect key="frame" x="192" y="41" width="112" height="20"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Sqz-U7-hcU" firstAttribute="trailing" secondItem="r3w-IL-RWL" secondAttribute="trailing" id="Hn8-O5-Yn8"/>
+                                        <constraint firstAttribute="trailing" secondItem="r3w-IL-RWL" secondAttribute="trailing" constant="16" id="Hp4-wN-Da0"/>
+                                        <constraint firstItem="Sqz-U7-hcU" firstAttribute="leading" secondItem="27L-1A-Etv" secondAttribute="trailing" constant="16" id="J6x-nK-96V"/>
+                                        <constraint firstItem="27L-1A-Etv" firstAttribute="leading" secondItem="r3w-IL-RWL" secondAttribute="leading" id="M8n-z4-BHg"/>
+                                        <constraint firstItem="Sqz-U7-hcU" firstAttribute="centerY" secondItem="27L-1A-Etv" secondAttribute="centerY" id="Vvj-JP-M7A"/>
+                                        <constraint firstItem="27L-1A-Etv" firstAttribute="top" secondItem="r3w-IL-RWL" secondAttribute="bottom" constant="8" id="cKX-ra-diA"/>
+                                        <constraint firstItem="r3w-IL-RWL" firstAttribute="leading" secondItem="gwq-de-cW7" secondAttribute="leading" constant="16" id="fGK-Je-meg"/>
+                                        <constraint firstItem="r3w-IL-RWL" firstAttribute="top" secondItem="gwq-de-cW7" secondAttribute="top" constant="11" id="vFg-p6-Qzd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="brandLabel" destination="r3w-IL-RWL" id="cFQ-VH-p1M"/>
+                                    <outlet property="nameLabel" destination="27L-1A-Etv" id="8e4-wx-QgX"/>
+                                    <outlet property="rating" destination="Sqz-U7-hcU" id="WTd-Bk-4hf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JTh-Aa-rs0" id="73z-t4-3oY"/>
+                            <outlet property="delegate" destination="JTh-Aa-rs0" id="ebb-es-HLM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Teas" id="TFQ-BL-LIE">
                         <rightBarButtonItems>
-                            <barButtonItem image="Nav Settings" id="uQh-mx-D6n">
+                            <barButtonItem title="Item" image="Nav Settings" id="dbp-DQ-ixQ">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
-                            <barButtonItem systemItem="add" id="DX0-8M-quY">
+                            <barButtonItem systemItem="add" id="klx-3g-5PV">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0OR-eK-Ywv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGr-Zq-RNP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="1635"/>
+            <point key="canvasLocation" x="60" y="1633"/>
         </scene>
         <!--Brew-->
         <scene sceneID="GJn-RU-dxX">
@@ -124,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cyc-oI-jmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="1634"/>
+            <point key="canvasLocation" x="751.875" y="1633.0985915492959"/>
         </scene>
         <!--Timer-->
         <scene sceneID="FjP-qu-zrE">
@@ -192,7 +244,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="zDy-ZV-1b6" kind="relationship" relationship="rootViewController" id="Z1Q-N2-JwG"/>
+                        <segue destination="JTh-Aa-rs0" kind="relationship" relationship="rootViewController" id="C1q-o8-FaG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpG-Go-bbq" userLabel="First Responder" sceneMemberID="firstResponder"/>

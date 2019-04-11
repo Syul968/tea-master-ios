@@ -10,6 +10,11 @@
 		C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD73225E76FA0079BD05 /* TeasController.swift */; };
 		C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD75225E9DCA0079BD05 /* BrewController.swift */; };
 		C443FD78225E9E010079BD05 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD77225E9E010079BD05 /* TimerController.swift */; };
+		C443FD7A225EA6360079BD05 /* TeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */; };
+		C443FD7C225EAAA10079BD05 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD7B225EAAA10079BD05 /* RatingControl.swift */; };
+		C443FD7F225EB0D50079BD05 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD7E225EB0D50079BD05 /* CosmosDistrib.swift */; };
+		C443FD81225EB6700079BD05 /* Tea.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD80225EB6700079BD05 /* Tea.swift */; };
+		C443FD83225EBB220079BD05 /* TeaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD82225EBB220079BD05 /* TeaTableViewController.swift */; };
 		C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3240223F362400F764AB /* AppDelegate.swift */; };
 		C4DC3243223F362400F764AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3242223F362400F764AB /* ViewController.swift */; };
 		C4DC3246223F362400F764AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3244223F362400F764AB /* Main.storyboard */; };
@@ -21,6 +26,11 @@
 		C443FD73225E76FA0079BD05 /* TeasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeasController.swift; sourceTree = "<group>"; };
 		C443FD75225E9DCA0079BD05 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
 		C443FD77225E9E010079BD05 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
+		C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTableViewCell.swift; sourceTree = "<group>"; };
+		C443FD7B225EAAA10079BD05 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		C443FD7E225EB0D50079BD05 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		C443FD80225EB6700079BD05 /* Tea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tea.swift; sourceTree = "<group>"; };
+		C443FD82225EBB220079BD05 /* TeaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTableViewController.swift; sourceTree = "<group>"; };
 		C4DC323D223F362400F764AB /* Tea Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tea Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DC3240223F362400F764AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DC3242223F362400F764AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C443FD7D225EB0B80079BD05 /* dist */ = {
+			isa = PBXGroup;
+			children = (
+				C443FD7E225EB0D50079BD05 /* CosmosDistrib.swift */,
+			);
+			path = dist;
+			sourceTree = "<group>";
+		};
 		C4DC3234223F362400F764AB = {
 			isa = PBXGroup;
 			children = (
@@ -61,14 +79,19 @@
 			isa = PBXGroup;
 			children = (
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
-				C4DC3242223F362400F764AB /* ViewController.swift */,
 				C4DC3244223F362400F764AB /* Main.storyboard */,
+				C443FD80225EB6700079BD05 /* Tea.swift */,
+				C4DC3242223F362400F764AB /* ViewController.swift */,
 				C443FD77225E9E010079BD05 /* TimerController.swift */,
 				C443FD75225E9DCA0079BD05 /* BrewController.swift */,
 				C443FD73225E76FA0079BD05 /* TeasController.swift */,
+				C443FD82225EBB220079BD05 /* TeaTableViewController.swift */,
+				C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */,
+				C443FD7B225EAAA10079BD05 /* RatingControl.swift */,
 				C4DC3247223F362500F764AB /* Assets.xcassets */,
 				C4DC3249223F362500F764AB /* LaunchScreen.storyboard */,
 				C4DC324C223F362500F764AB /* Info.plist */,
+				C443FD7D225EB0B80079BD05 /* dist */,
 			);
 			path = "Tea Master";
 			sourceTree = "<group>";
@@ -105,6 +128,7 @@
 				TargetAttributes = {
 					C4DC323C223F362400F764AB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -144,10 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C443FD7C225EAAA10079BD05 /* RatingControl.swift in Sources */,
+				C443FD7A225EA6360079BD05 /* TeaTableViewCell.swift in Sources */,
 				C4DC3243223F362400F764AB /* ViewController.swift in Sources */,
+				C443FD7F225EB0D50079BD05 /* CosmosDistrib.swift in Sources */,
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
 				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
+				C443FD81225EB6700079BD05 /* Tea.swift in Sources */,
 				C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */,
+				C443FD83225EBB220079BD05 /* TeaTableViewController.swift in Sources */,
 				C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.tec.Tea-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -319,7 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.tec.Tea-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
