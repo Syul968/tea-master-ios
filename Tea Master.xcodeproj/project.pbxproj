@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD73225E76FA0079BD05 /* TeasController.swift */; };
 		C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD75225E9DCA0079BD05 /* BrewController.swift */; };
 		C443FD78225E9E010079BD05 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD77225E9E010079BD05 /* TimerController.swift */; };
 		C443FD7A225EA6360079BD05 /* TeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */; };
@@ -25,7 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C443FD73225E76FA0079BD05 /* TeasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeasController.swift; sourceTree = "<group>"; };
 		C443FD75225E9DCA0079BD05 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
 		C443FD77225E9E010079BD05 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTableViewCell.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 				C4DC3242223F362400F764AB /* LoginViewController.swift */,
 				C443FD77225E9E010079BD05 /* TimerController.swift */,
 				C443FD75225E9DCA0079BD05 /* BrewController.swift */,
-				C443FD73225E76FA0079BD05 /* TeasController.swift */,
 				C443FD82225EBB220079BD05 /* TeaTableViewController.swift */,
 				C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */,
 				C443FD7B225EAAA10079BD05 /* RatingControl.swift */,
@@ -191,7 +188,6 @@
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
 				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
 				C443FD81225EB6700079BD05 /* Tea.swift in Sources */,
-				C443FD74225E76FA0079BD05 /* TeasController.swift in Sources */,
 				C443FD83225EBB220079BD05 /* TeaTableViewController.swift in Sources */,
 				C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */,
 			);

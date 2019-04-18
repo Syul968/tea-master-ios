@@ -18,8 +18,7 @@ class TeaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationController?.navigationBar.tintColor = UIColor(hex: 0x74B24B)
-//        self.navigationController?.navigationBar.barTintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         
         if let tea = tea {
             brand.text = tea.brand

@@ -220,7 +220,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="IjW-WN-w3t">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="SFv-3Z-IHx">
-                            <color key="tintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
