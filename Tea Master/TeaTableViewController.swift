@@ -35,15 +35,15 @@ class TeaTableViewController: UITableViewController {
     }
     
     private func loadSampleTeas() {
-        guard let tea1 = Tea(brand: "Whittard", name: "Tippy Assam", type: .black, isPublic: false) else {
+        guard let tea1 = Tea(brand: "Whittard", name: "Tippy Assam", type: .black, isPublic: false, rating: 4.5) else {
             fatalError("Unable to initialize tea1")
         }
         
-        guard let tea2 = Tea(brand: "Fortnum & Mason", name: "Jubilee", type: .black, isPublic: false) else {
+        guard let tea2 = Tea(brand: "Fortnum & Mason", name: "Jubilee", type: .black, isPublic: false, rating: 3.5) else {
             fatalError("Unable to initialize tea2")
         }
         
-        guard let tea3 = Tea(brand: "Whittard", name: "Cherry Blossom", type: .green, isPublic: false) else {
+        guard let tea3 = Tea(brand: "Whittard", name: "Cherry Blossom", type: .green, isPublic: false, rating: 3.0) else {
             fatalError("Unable to initialize tea3")
         }
         
@@ -60,6 +60,7 @@ class TeaTableViewController: UITableViewController {
         let tea = teas[indexPath.row]
         cell.brandLabel.text = tea.brand
         cell.nameLabel.text = tea.name
+        cell.rating.rating = tea.rating
 
         return cell
     }
@@ -101,12 +102,31 @@ class TeaTableViewController: UITableViewController {
 
     /*
     // MARK: - Navigation
+    */
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        super.prepare(for: segue, sender: sender);
+        switch(segue.identifier ?? "") {
+        case "ShowDetail":
+            guard let teaDetailViewController = segue.destination as? TeaViewController else {
+                fatalError("Unexpected destination")
+            }
+            
+            guard let selectedTeaCell = sender as? TeaTableViewCell else {
+                fatalError("Unexpected sender")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedTeaCell) else {
+                fatalError("The selected cell is not being displayed by the table ")
+            }
+            
+            let selectedTea = teas[indexPath.row]
+            teaDetailViewController.tea = selectedTea
+        default:
+            fatalError("Unexpected segue identifier")
+        }
     }
-    */
+ 
 
 }

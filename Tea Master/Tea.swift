@@ -8,12 +8,12 @@
 
 import UIKit
 
-enum TeaType {
-    case black
-    case green
-    case white
-    case tisane
-    case other
+enum TeaType: String {
+    case black = "Black"
+    case green = "Green"
+    case white = "White"
+    case tisane = "Tisane"
+    case other = "Other"
 }
 
 class Tea {
@@ -22,8 +22,9 @@ class Tea {
     var name: String
     var type: TeaType
     var isPublic: Bool
+    var rating: Double
     
-    init?(brand: String, name: String, type: TeaType, isPublic: Bool) {
+    init?(brand: String, name: String, type: TeaType, isPublic: Bool, rating: Double) {
         if(brand.isEmpty) {
             return nil
         }
@@ -35,5 +36,6 @@ class Tea {
         self.name = name
         self.type = type
         self.isPublic = isPublic
+        self.rating = rating
     }
 }
