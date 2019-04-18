@@ -143,6 +143,9 @@
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="klx-3g-5PV">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="xOV-lC-qg7" kind="presentation" identifier="AddTea" id="8zK-PY-9z3"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -177,7 +180,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
                                 <rect key="frame" x="184" y="17.5" width="120" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -232,7 +235,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd6-Ky-sez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="2330"/>
+            <point key="canvasLocation" x="-263" y="2431"/>
+        </scene>
+        <!--New Tea-->
+        <scene sceneID="SSS-re-Mfg">
+            <objects>
+                <viewController id="TcT-1L-avc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ecs-Da-PRO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit tea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzK-jO-yXo">
+                                <rect key="frame" x="131" y="274" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9oC-5a-BMR"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Tea" id="nKk-Ft-J2T">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wR9-sW-MRe">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cop-c1-SZY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dpd-xt-kvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368" y="3205"/>
         </scene>
         <!--Brew-->
         <scene sceneID="GJn-RU-dxX">
@@ -381,6 +416,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5U-SS-u0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1434.375" y="880.9859154929577"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kiv-hC-mOj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xOV-lC-qg7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdp-qj-tTU">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TcT-1L-avc" kind="relationship" relationship="rootViewController" id="g2X-VN-Aks"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCu-Nf-OqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367.5" y="2430.6338028169016"/>
         </scene>
     </scenes>
     <resources>
