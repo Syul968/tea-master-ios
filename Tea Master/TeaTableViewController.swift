@@ -123,8 +123,8 @@ class TeaTableViewController: UITableViewController {
             
             let selectedTea = teas[indexPath.row]
             teaDetailViewController.tea = selectedTea
-//        case "AddTea":
-//            print("Segue to new tea view")
+        case "AddTea":
+            print("Segue to new tea view")
         default:
             fatalError("Unexpected segue identifier")
         }
