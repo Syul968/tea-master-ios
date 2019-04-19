@@ -31,7 +31,6 @@ class NewTeaViewController: FormViewController {
             }.cellUpdate { cell, row in
                 if row.isValid {
                     self.validationFlags = self.validationFlags | 0b100
-                    print(self.validationFlags)
                     self.saveButton.isEnabled = self.validationFlags == 0b111
                 } else {
                     self.validationFlags = self.validationFlags & 0b011
@@ -47,7 +46,6 @@ class NewTeaViewController: FormViewController {
             }.cellUpdate {cell, row in
                 if row.isValid {
                     self.validationFlags = self.validationFlags | 0b010
-                    print(self.validationFlags)
                     self.saveButton.isEnabled = self.validationFlags == 0b111
                 } else {
                     self.validationFlags = self.validationFlags & 0b101
@@ -77,6 +75,8 @@ class NewTeaViewController: FormViewController {
                 } else {
                     self.validationFlags = self.validationFlags & 0b110
                 }
+            }.onPresent { form, selectorController in
+                selectorController.enableDeselection = false
             }
             <<< SwitchRow() { row in
                 row.tag = "isPublicTea"
@@ -101,5 +101,9 @@ class NewTeaViewController: FormViewController {
         
         tea = Tea(brand: brand, name: name, type: TeaType(rawValue: type)!, isPublic: isPublic, rating: rating)
         //  Post to backend
+    }
+    
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
 }

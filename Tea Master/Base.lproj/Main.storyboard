@@ -250,6 +250,9 @@
                     <navigationItem key="navigationItem" title="New Tea" id="nKk-Ft-J2T">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wR9-sW-MRe">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancel:" destination="TcT-1L-avc" id="5RV-Tq-pbV"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Cop-c1-SZY">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
