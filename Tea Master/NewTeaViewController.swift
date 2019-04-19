@@ -30,7 +30,6 @@ class NewTeaViewController: FormViewController {
                 cell.textField.autocorrectionType = .no
             }.cellUpdate { cell, row in
                 if row.isValid {
-                    print("Brand valid")
                     self.validationFlags = self.validationFlags | 0b100
                     print(self.validationFlags)
                     self.saveButton.isEnabled = self.validationFlags == 0b111
@@ -47,7 +46,6 @@ class NewTeaViewController: FormViewController {
                 cell.textField.autocorrectionType = .no
             }.cellUpdate {cell, row in
                 if row.isValid {
-                    print("Name valid")
                     self.validationFlags = self.validationFlags | 0b010
                     print(self.validationFlags)
                     self.saveButton.isEnabled = self.validationFlags == 0b111
@@ -59,13 +57,22 @@ class NewTeaViewController: FormViewController {
                 $0.tag = "teaType"
                 $0.title = "Type"
                 $0.options = types.map { $0 }
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
+                let ruleRequiredViaClosure = RuleClosure<String> { rowValue in
+                    guard let rowValue = rowValue else {
+                        return(ValidationError(msg : "No type selected"))
+                    }
+                    if TeaType(rawValue: rowValue) != nil {
+                        return nil
+                    } else {
+                        return ValidationError(msg: "Not a valid type")
+                    }
+                }
+                $0.add(rule: ruleRequiredViaClosure)
+                $0.validationOptions = .validatesOnDemand
             }.cellUpdate { cell, row in
+                self.form.validate()
                 if row.isValid {
-                    print("Type valid")
                     self.validationFlags = self.validationFlags | 0b001
-                    print(self.validationFlags)
                     self.saveButton.isEnabled = self.validationFlags == 0b111
                 } else {
                     self.validationFlags = self.validationFlags & 0b110
