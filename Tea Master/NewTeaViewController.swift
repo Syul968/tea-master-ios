@@ -10,29 +10,89 @@ import UIKit
 import Eureka
 
 class NewTeaViewController: FormViewController {
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     var tea: Tea?
+    var validationFlags = 0b000
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        
-        form +++ Section()
-            <<< TextRow() { row in
-                row.title = "Brand"
-            }
-            <<< TextRow() { row in
-                row.title = "Name"
-            }
-        
-        form +++ SelectableSection<ListCheckRow<String>>("Type", selectionType: .singleSelection(enableDeselection: true))
         let types = [ TeaType.black.rawValue, TeaType.green.rawValue, TeaType.white.rawValue, TeaType.tisane.rawValue, TeaType.other.rawValue ]
         
-        for option in types {
-            form.last! <<< ListCheckRow<String>(option){ listRow in
-                listRow.title = option
-                listRow.selectableValue = option
-                listRow.value = nil
+        saveButton.isEnabled = false
+        form +++ Section("Tea details")
+            <<< TextRow() { row in
+                row.tag = "teaBrand"
+                row.title = "Brand"
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+            }.cellSetup { (cell, row) in
+                cell.textField.autocorrectionType = .no
+            }.cellUpdate { cell, row in
+                if row.isValid {
+                    print("Brand valid")
+                    self.validationFlags = self.validationFlags | 0b100
+                    print(self.validationFlags)
+                    self.saveButton.isEnabled = self.validationFlags == 0b111
+                } else {
+                    self.validationFlags = self.validationFlags & 0b011
+                }
             }
+            <<< TextRow() { row in
+                row.tag = "teaName"
+                row.title = "Name"
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+            }.cellSetup { (cell, row) in
+                cell.textField.autocorrectionType = .no
+            }.cellUpdate {cell, row in
+                if row.isValid {
+                    print("Name valid")
+                    self.validationFlags = self.validationFlags | 0b010
+                    print(self.validationFlags)
+                    self.saveButton.isEnabled = self.validationFlags == 0b111
+                } else {
+                    self.validationFlags = self.validationFlags & 0b101
+                }
+            }
+            <<< PushRow<String>() {
+                $0.tag = "teaType"
+                $0.title = "Type"
+                $0.options = types.map { $0 }
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
+            }.cellUpdate { cell, row in
+                if row.isValid {
+                    print("Type valid")
+                    self.validationFlags = self.validationFlags | 0b001
+                    print(self.validationFlags)
+                    self.saveButton.isEnabled = self.validationFlags == 0b111
+                } else {
+                    self.validationFlags = self.validationFlags & 0b110
+                }
+            }
+            <<< SwitchRow() { row in
+                row.tag = "isPublicTea"
+                row.title = "Public"
         }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            fatalError("Attempting to save from unexpected sender")
+        }
+        
+        let formValues = form.values()
+        let brand = formValues["teaBrand"] as! String
+        let name = formValues["teaName"] as! String
+        let type = formValues["teaType"] as! String
+        let isPublic = formValues["isPublicTea"] as! Bool
+        let rating = 0.0
+        
+        tea = Tea(brand: brand, name: name, type: TeaType(rawValue: type)!, isPublic: isPublic, rating: rating)
+        //  Post to backend
     }
 }
