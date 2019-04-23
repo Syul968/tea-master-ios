@@ -123,10 +123,19 @@ class TeaTableViewController: UITableViewController {
             
             let selectedTea = teas[indexPath.row]
             teaDetailViewController.tea = selectedTea
+        case "AddTea":
+            print("Segue to new tea view")
         default:
             fatalError("Unexpected segue identifier")
         }
     }
- 
+    
+    @IBAction func saveToTeasList(sender: UIStoryboardSegue) {
+        if let source = sender.source as? NewTeaViewController, let tea = source.tea {
+            let newIndexPath = IndexPath(row: teas.count, section: 0)
+            teas.append(tea)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
 
 }
