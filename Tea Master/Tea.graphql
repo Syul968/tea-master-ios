@@ -1,0 +1,7 @@
+query GetUserTeas {
+    userTeas {
+        brand
+        name
+        type
+    }
+}

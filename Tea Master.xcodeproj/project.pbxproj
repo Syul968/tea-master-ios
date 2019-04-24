@@ -21,6 +21,8 @@
 		C45FF5342269458500FBD4DD /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C45FF5302269450400FBD4DD /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C498C658226FA9670027B6D0 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C498C657226FA9670027B6D0 /* Apollo.framework */; };
 		C498C65C226FAC360027B6D0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C498C65B226FAC360027B6D0 /* schema.json */; };
+		C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C498C65D2270C7D20027B6D0 /* Tea.graphql */; };
+		C498C6602270C8060027B6D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498C65F2270C8060027B6D0 /* API.swift */; };
 		C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3240223F362400F764AB /* AppDelegate.swift */; };
 		C4DC3243223F362400F764AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3242223F362400F764AB /* LoginViewController.swift */; };
 		C4DC3246223F362400F764AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3244223F362400F764AB /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		C45FF52A2269450400FBD4DD /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Eureka.xcodeproj; path = Eureka/Eureka.xcodeproj; sourceTree = "<group>"; };
 		C498C657226FA9670027B6D0 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 		C498C65B226FAC360027B6D0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		C498C65D2270C7D20027B6D0 /* Tea.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tea.graphql; sourceTree = "<group>"; };
+		C498C65F2270C8060027B6D0 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C4DC323D223F362400F764AB /* Tea Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tea Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DC3240223F362400F764AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DC3242223F362400F764AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		C4DC323F223F362400F764AB /* Tea Master */ = {
 			isa = PBXGroup;
 			children = (
+				C498C65D2270C7D20027B6D0 /* Tea.graphql */,
+				C498C65F2270C8060027B6D0 /* API.swift */,
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
 				C4DC3244223F362400F764AB /* Main.storyboard */,
 				C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */,
@@ -263,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */,
 				C498C65C226FAC360027B6D0 /* schema.json in Resources */,
 				C4DC324B223F362500F764AB /* LaunchScreen.storyboard in Resources */,
 				C4DC3248223F362500F764AB /* Assets.xcassets in Resources */,
@@ -324,6 +331,7 @@
 				C4507B2E22680CC500948ECA /* UIColor+HexInit.swift in Sources */,
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
 				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
+				C498C6602270C8060027B6D0 /* API.swift in Sources */,
 				C443FD81225EB6700079BD05 /* Tea.swift in Sources */,
 				C443FD83225EBB220079BD05 /* TeaTableViewController.swift in Sources */,
 				C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */,

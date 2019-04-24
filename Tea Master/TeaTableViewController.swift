@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import Apollo
 
 class TeaTableViewController: UITableViewController {
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    var apollo: ApolloClient!
     var teas = [Tea]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSampleTeas()
+        apollo = delegate.apollo
+        loadUserTeas()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -48,6 +52,24 @@ class TeaTableViewController: UITableViewController {
         }
         
         teas += [tea1, tea2, tea3]
+    }
+    
+    func loadUserTeas() {
+        let teasQuery = GetUserTeasQuery()
+        
+        apollo.fetch(query: teasQuery) { [weak self] result, error in
+            guard let teas = result?.data?.userTeas else {
+                print("Apollo fetch guard failed")
+                if(result != nil) {
+                    print(result!)
+                } else {
+                    print(">>> ERROR: \(error!)")
+                }
+                return
+            }
+            self?.teas = teas.map { Tea(brand: $0.brand, name: $0.name, type: TeaType(rawValue: $0.type)!, isPublic: false, rating: 3.0)! }
+            self?.tableView.reloadData()
+        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
