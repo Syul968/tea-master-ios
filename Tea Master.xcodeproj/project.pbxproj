@@ -28,6 +28,7 @@
 		C4DC3246223F362400F764AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3244223F362400F764AB /* Main.storyboard */; };
 		C4DC3248223F362500F764AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3247223F362500F764AB /* Assets.xcassets */; };
 		C4DC324B223F362500F764AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3249223F362500F764AB /* LaunchScreen.storyboard */; };
+		C4FF83C422710A2E00ECE179 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF83C322710A2E00ECE179 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		C4DC3247223F362500F764AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4DC324A223F362500F764AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4DC324C223F362500F764AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4FF83C322710A2E00ECE179 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				C498C65F2270C8060027B6D0 /* API.swift */,
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
 				C4DC3244223F362400F764AB /* Main.storyboard */,
+				C4FF83C322710A2E00ECE179 /* LoginViewController.swift */,
 				C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */,
 				C4507B2A2267F78F00948ECA /* TeaViewController.swift */,
 				C443FD80225EB6700079BD05 /* Tea.swift */,
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FF83C422710A2E00ECE179 /* LoginViewController.swift in Sources */,
 				C443FD7C225EAAA10079BD05 /* RatingControl.swift in Sources */,
 				C4507B2B2267F78F00948ECA /* TeaViewController.swift in Sources */,
 				C443FD7A225EA6360079BD05 /* TeaTableViewCell.swift in Sources */,

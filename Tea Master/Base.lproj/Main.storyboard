@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-746" y="55"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="gKI-Qo-37b">
             <objects>
-                <viewController id="1R7-ug-5GQ" sceneMemberID="viewController">
+                <viewController id="1R7-ug-5GQ" customClass="LoginViewController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AVE-Mr-Uoh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,7 +80,11 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Title" id="uvl-1E-C8F">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="aVn-Sk-NQ2"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="aVn-Sk-NQ2">
+                                            <connections>
+                                                <action selector="cancel:" destination="1R7-ug-5GQ" id="MIR-SD-bnN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
