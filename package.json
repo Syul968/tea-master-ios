@@ -1,0 +1,23 @@
+{
+  "name": "tea-master",
+  "version": "1.0.0",
+  "description": "iOS Tea Master app",
+  "main": "",
+  "dependencies": {
+    "apollo": "^1.9.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syul968/tea-master-ios.git"
+  },
+  "author": "Syul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syul968/tea-master-ios/issues"
+  },
+  "homepage": "https://github.com/Syul968/tea-master-ios#readme"
+}
