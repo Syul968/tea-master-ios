@@ -7,10 +7,18 @@
 //
 
 import UIKit
+import Apollo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let apollo: ApolloClient = {
+        let configuration = URLSessionConfiguration .default
+        //  TO DO: Get token from local storage
+        configuration .httpAdditionalHeaders = ["Authorization": "token"]
+        let url = URL(string: "http://localhost:4000")!
+        
+        return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
+    }()
     var window: UIWindow?
 
 
