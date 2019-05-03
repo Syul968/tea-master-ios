@@ -74,29 +74,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0t-bH-ADy">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0t-bH-ADy">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="tintColor" red="0.45882352939999999" green="0.69411764710000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" red="0.45882352939999999" green="0.69411764710000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Title" id="uvl-1E-C8F">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="aVn-Sk-NQ2">
+                                    <navigationItem id="uvl-1E-C8F">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="aVn-Sk-NQ2">
                                             <connections>
-                                                <action selector="cancel:" destination="1R7-ug-5GQ" id="MIR-SD-bnN"/>
+                                                <action selector="cancel:" destination="1R7-ug-5GQ" id="CdO-Qm-ZGY"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kzd-oj-C7g">
+                                <rect key="frame" x="48" y="120" width="224" height="122"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDj-7s-tnf">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tbf-0d-UjR">
+                                        <rect key="frame" x="0.0" y="46" width="224" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhQ-zo-qDT">
+                                        <rect key="frame" x="0.0" y="92" width="224" height="30"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="1R7-ug-5GQ" eventType="touchUpInside" id="3xo-sB-HiD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tbf-0d-UjR" firstAttribute="centerX" secondItem="hDj-7s-tnf" secondAttribute="centerX" id="CCn-8t-4ub"/>
+                                    <constraint firstItem="dhQ-zo-qDT" firstAttribute="width" secondItem="Tbf-0d-UjR" secondAttribute="width" id="ae9-IU-Fhz"/>
+                                    <constraint firstItem="Tbf-0d-UjR" firstAttribute="width" secondItem="hDj-7s-tnf" secondAttribute="width" id="htC-kA-8dg"/>
+                                    <constraint firstItem="dhQ-zo-qDT" firstAttribute="centerX" secondItem="Tbf-0d-UjR" secondAttribute="centerX" id="qaU-DQ-pKh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.45882352939999999" green="0.69411764710000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="kzd-oj-C7g" firstAttribute="centerX" secondItem="Tid-uS-a3s" secondAttribute="centerX" id="245-oZ-LlX"/>
                             <constraint firstItem="X0t-bH-ADy" firstAttribute="centerX" secondItem="Tid-uS-a3s" secondAttribute="centerX" id="Mau-0j-oGC"/>
                             <constraint firstItem="X0t-bH-ADy" firstAttribute="width" secondItem="AVE-Mr-Uoh" secondAttribute="width" id="h3a-oJ-pMu"/>
+                            <constraint firstItem="kzd-oj-C7g" firstAttribute="top" secondItem="Tid-uS-a3s" secondAttribute="top" constant="100" id="jVs-Sd-wIM"/>
+                            <constraint firstItem="kzd-oj-C7g" firstAttribute="width" secondItem="AVE-Mr-Uoh" secondAttribute="width" multiplier="0.7" id="ps7-cb-5Hs"/>
                             <constraint firstItem="X0t-bH-ADy" firstAttribute="top" secondItem="Tid-uS-a3s" secondAttribute="top" id="xFL-nG-NvR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Tid-uS-a3s"/>
                     </view>
+                    <connections>
+                        <outlet property="navBar" destination="X0t-bH-ADy" id="H2O-9B-GsY"/>
+                        <outlet property="passField" destination="Tbf-0d-UjR" id="1BU-Tx-g8N"/>
+                        <outlet property="userField" destination="hDj-7s-tnf" id="upP-vY-vMN"/>
+                        <segue destination="LaI-qm-ue3" kind="show" identifier="letUserIn" id="js4-qn-iKj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2E-re-vMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +260,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
                                 <rect key="frame" x="184" y="17.5" width="120" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>

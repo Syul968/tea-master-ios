@@ -5,3 +5,7 @@ query GetUserTeas {
         type
     }
 }
+
+mutation Login($user: String!, $password: String!) {
+    login(id: $user, password: $password)
+}

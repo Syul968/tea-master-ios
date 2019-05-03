@@ -93,3 +93,47 @@ public final class GetUserTeasQuery: GraphQLQuery {
     }
   }
 }
+
+public final class LoginMutation: GraphQLMutation {
+  public let operationDefinition =
+    "mutation Login($user: String!, $password: String!) {\n  login(id: $user, password: $password)\n}"
+
+  public var user: String
+  public var password: String
+
+  public init(user: String, password: String) {
+    self.user = user
+    self.password = password
+  }
+
+  public var variables: GraphQLMap? {
+    return ["user": user, "password": password]
+  }
+
+  public struct Data: GraphQLSelectionSet {
+    public static let possibleTypes = ["Mutation"]
+
+    public static let selections: [GraphQLSelection] = [
+      GraphQLField("login", arguments: ["id": GraphQLVariable("user"), "password": GraphQLVariable("password")], type: .scalar(String.self)),
+    ]
+
+    public private(set) var resultMap: ResultMap
+
+    public init(unsafeResultMap: ResultMap) {
+      self.resultMap = unsafeResultMap
+    }
+
+    public init(login: String? = nil) {
+      self.init(unsafeResultMap: ["__typename": "Mutation", "login": login])
+    }
+
+    public var login: String? {
+      get {
+        return resultMap["login"] as? String
+      }
+      set {
+        resultMap.updateValue(newValue, forKey: "login")
+      }
+    }
+  }
+}
