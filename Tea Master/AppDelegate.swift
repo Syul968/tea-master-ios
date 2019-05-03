@@ -8,13 +8,14 @@
 
 import UIKit
 import Apollo
+import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     let apollo: ApolloClient = {
         let configuration = URLSessionConfiguration .default
-        //  TO DO: Get token from local storage
-        configuration .httpAdditionalHeaders = ["Authorization": "token"]
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
+        configuration .httpAdditionalHeaders = ["Authorization": token ?? ""]
         let url = URL(string: "http://localhost:4000")!
         
         return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))

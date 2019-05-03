@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C41CD711227124A2006CD806 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41CD710227124A2006CD806 /* Eureka.framework */; };
 		C41CD7122271253A006CD806 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C498C657226FA9670027B6D0 /* Apollo.framework */; };
+		C43722BD227BED0400D3015E /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43722BC227BED0400D3015E /* SwiftKeychainWrapper.framework */; };
 		C443FD76225E9DCA0079BD05 /* BrewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD75225E9DCA0079BD05 /* BrewController.swift */; };
 		C443FD78225E9E010079BD05 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD77225E9E010079BD05 /* TimerController.swift */; };
 		C443FD7A225EA6360079BD05 /* TeaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		C41CD710227124A2006CD806 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		C43722BC227BED0400D3015E /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = "<group>"; };
 		C443FD75225E9DCA0079BD05 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
 		C443FD77225E9E010079BD05 /* TimerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerController.swift; sourceTree = "<group>"; };
 		C443FD79225EA6360079BD05 /* TeaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaTableViewCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43722BD227BED0400D3015E /* SwiftKeychainWrapper.framework in Frameworks */,
 				C41CD7122271253A006CD806 /* Apollo.framework in Frameworks */,
 				C41CD711227124A2006CD806 /* Eureka.framework in Frameworks */,
 			);
@@ -101,6 +104,7 @@
 		C498C655226FA9670027B6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C43722BC227BED0400D3015E /* SwiftKeychainWrapper.framework */,
 				C41CD710227124A2006CD806 /* Eureka.framework */,
 				C498C657226FA9670027B6D0 /* Apollo.framework */,
 			);
@@ -234,6 +238,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Apollo.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Eureka.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftKeychainWrapper.framework",
 			);
 			outputFileListPaths = (
 			);

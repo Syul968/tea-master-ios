@@ -8,6 +8,7 @@
 
 import UIKit
 import Apollo
+import SwiftKeychainWrapper
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var navBar: UINavigationBar!
@@ -19,6 +20,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navBar.shadowImage = UIImage()
         userField.becomeFirstResponder()
         
@@ -44,8 +46,10 @@ class LoginViewController: UIViewController {
             
             if let token = result?.data?.login {
                 print("Logged in")
-                print("Token: \(token)") // Should save to device
+                print("Token: \(token)")
                 self.performSegue(withIdentifier: "letUserIn", sender: self)
+                KeychainWrapper.standard.set(self.userField.text!, forKey: "username")
+                KeychainWrapper.standard.set(token, forKey: "token")
             } else {
                 print(">>> Wrong credentials!")
                 

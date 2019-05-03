@@ -8,6 +8,7 @@
 
 import UIKit
 import Apollo
+import SwiftKeychainWrapper
 
 class TeaTableViewController: UITableViewController {
     let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -55,6 +56,8 @@ class TeaTableViewController: UITableViewController {
     }
     
     func loadUserTeas() {
+        let token: String? = KeychainWrapper.standard.string(forKey: "token")
+        
         let teasQuery = GetUserTeasQuery()
         
         apollo.fetch(query: teasQuery) { [weak self] result, error in
