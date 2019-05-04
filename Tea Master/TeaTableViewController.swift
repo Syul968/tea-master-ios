@@ -151,7 +151,7 @@ class TeaTableViewController: UITableViewController {
         case "AddTea":
             print("Segue to new tea view")
         default:
-            fatalError("Unexpected segue identifier")
+            print("Segue from table view without preparing actions")
         }
     }
     

@@ -23,6 +23,7 @@
 		C498C65C226FAC360027B6D0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C498C65B226FAC360027B6D0 /* schema.json */; };
 		C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C498C65D2270C7D20027B6D0 /* Tea.graphql */; };
 		C498C6602270C8060027B6D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498C65F2270C8060027B6D0 /* API.swift */; };
+		C49BCA4A227D459B008C8BD4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */; };
 		C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3240223F362400F764AB /* AppDelegate.swift */; };
 		C4DC3243223F362400F764AB /* AuthwallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DC3242223F362400F764AB /* AuthwallViewController.swift */; };
 		C4DC3246223F362400F764AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DC3244223F362400F764AB /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		C498C65B226FAC360027B6D0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C498C65D2270C7D20027B6D0 /* Tea.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tea.graphql; sourceTree = "<group>"; };
 		C498C65F2270C8060027B6D0 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C4DC323D223F362400F764AB /* Tea Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tea Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4DC3240223F362400F764AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4DC3242223F362400F764AB /* AuthwallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthwallViewController.swift; sourceTree = "<group>"; };
@@ -135,11 +137,12 @@
 				C498C65F2270C8060027B6D0 /* API.swift */,
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
 				C4DC3244223F362400F764AB /* Main.storyboard */,
+				C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */,
 				C4FF83C322710A2E00ECE179 /* LoginViewController.swift */,
+				C4DC3242223F362400F764AB /* AuthwallViewController.swift */,
 				C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */,
 				C4507B2A2267F78F00948ECA /* TeaViewController.swift */,
 				C443FD80225EB6700079BD05 /* Tea.swift */,
-				C4DC3242223F362400F764AB /* AuthwallViewController.swift */,
 				C443FD77225E9E010079BD05 /* TimerController.swift */,
 				C443FD75225E9DCA0079BD05 /* BrewController.swift */,
 				C443FD82225EBB220079BD05 /* TeaTableViewController.swift */,
@@ -281,6 +284,7 @@
 				C443FD7F225EB0D50079BD05 /* CosmosDistrib.swift in Sources */,
 				C4507B2E22680CC500948ECA /* UIColor+HexInit.swift in Sources */,
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
+				C49BCA4A227D459B008C8BD4 /* SettingsViewController.swift in Sources */,
 				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
 				C498C6602270C8060027B6D0 /* API.swift in Sources */,
 				C443FD81225EB6700079BD05 /* Tea.swift in Sources */,

@@ -12,16 +12,22 @@ import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    let apollo: ApolloClient = {
+    var apollo: ApolloClient!
+    var window: UIWindow?
+    
+    func updateApolloClient(token: String?) {
         let configuration = URLSessionConfiguration .default
-        let token: String? = KeychainWrapper.standard.string(forKey: "token")
-        configuration .httpAdditionalHeaders = ["Authorization": token ?? ""]
         let url = URL(string: "http://localhost:4000")!
         
-        return ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
-    }()
-    var window: UIWindow?
-
+        if token != nil {
+            print("New apollo client with token")
+            configuration .httpAdditionalHeaders = ["Authorization": token!]
+        } else {
+            print("New apollo client without token")
+        }
+        
+        apollo = ApolloClient(networkTransport: HTTPNetworkTransport(url: url, configuration: configuration))
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

@@ -47,9 +47,13 @@ class LoginViewController: UIViewController {
             if let token = result?.data?.login {
                 print("Logged in")
                 print("Token: \(token)")
-                self.performSegue(withIdentifier: "letUserIn", sender: self)
                 KeychainWrapper.standard.set(self.userField.text!, forKey: "username")
                 KeychainWrapper.standard.set(token, forKey: "token")
+                
+                self.delegate.updateApolloClient(token: token)
+                self.apollo = self.delegate.apollo
+                
+                self.performSegue(withIdentifier: "letUserIn", sender: self)
             } else {
                 print(">>> Wrong credentials!")
                 

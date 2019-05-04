@@ -10,6 +10,7 @@ import UIKit
 import SwiftKeychainWrapper
 
 class AuthwallViewController: UIViewController {
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,10 @@ class AuthwallViewController: UIViewController {
         print("Token from authwall: \(token ?? ":/")")
         if token != nil {
             //  Verify token is valid with server
+            self.delegate.updateApolloClient(token: token)
             self.performSegue(withIdentifier: "userHasToken", sender: self)
+        } else {
+            self.delegate.updateApolloClient(token: nil)
         }
     }
 

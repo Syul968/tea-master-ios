@@ -223,6 +223,9 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="Nav Settings" id="dbp-DQ-ixQ">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="sUs-3w-Wvq" kind="presentation" identifier="" id="Zg6-yE-VZh"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="add" id="klx-3g-5PV">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -263,7 +266,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
                                 <rect key="frame" x="184" y="17.5" width="120" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -411,6 +414,32 @@
             </objects>
             <point key="canvasLocation" x="1434" y="1634"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="4xW-GN-M8U">
+            <objects>
+                <viewController id="sK6-Zb-2Vb" customClass="SettingsViewController" customModule="Tea_Master" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X7T-fR-O7k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xQV-ck-Vjl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="3Y7-Wm-biZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="EgX-yk-2SM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="done:" destination="sK6-Zb-2Vb" id="mct-6Y-DYH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="LoggedOut" id="hMS-aH-FBX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekY-pS-thE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1073" y="3205"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xGp-rG-kUK">
             <objects>
@@ -522,6 +551,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCu-Nf-OqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="367.5" y="2430.6338028169016"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SYw-FR-8Ch">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sUs-3w-Wvq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A6m-Hv-hst">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sK6-Zb-2Vb" kind="relationship" relationship="rootViewController" id="fve-Er-eGL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lsl-Q3-RQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1074" y="2431"/>
         </scene>
     </scenes>
     <resources>
