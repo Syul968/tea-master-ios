@@ -20,7 +20,6 @@
 		C4507B2B2267F78F00948ECA /* TeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4507B2A2267F78F00948ECA /* TeaViewController.swift */; };
 		C4507B2E22680CC500948ECA /* UIColor+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4507B2D22680CC500948ECA /* UIColor+HexInit.swift */; };
 		C45FF52922693F7A00FBD4DD /* NewTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */; };
-		C498C65C226FAC360027B6D0 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C498C65B226FAC360027B6D0 /* schema.json */; };
 		C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C498C65D2270C7D20027B6D0 /* Tea.graphql */; };
 		C498C6602270C8060027B6D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498C65F2270C8060027B6D0 /* API.swift */; };
 		C49BCA4A227D459B008C8BD4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */; };
@@ -59,7 +58,6 @@
 		C4507B2D22680CC500948ECA /* UIColor+HexInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexInit.swift"; sourceTree = "<group>"; };
 		C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeaViewController.swift; sourceTree = "<group>"; };
 		C498C657226FA9670027B6D0 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
-		C498C65B226FAC360027B6D0 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C498C65D2270C7D20027B6D0 /* Tea.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tea.graphql; sourceTree = "<group>"; };
 		C498C65F2270C8060027B6D0 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				C4DC3247223F362500F764AB /* Assets.xcassets */,
 				C4DC3249223F362500F764AB /* LaunchScreen.storyboard */,
 				C4DC324C223F362500F764AB /* Info.plist */,
-				C498C65B226FAC360027B6D0 /* schema.json */,
 				C443FD7D225EB0B80079BD05 /* dist */,
 				C4507B2C22680C8A00948ECA /* Extensions */,
 			);
@@ -221,7 +218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */,
-				C498C65C226FAC360027B6D0 /* schema.json in Resources */,
 				C4DC324B223F362500F764AB /* LaunchScreen.storyboard in Resources */,
 				C4DC3248223F362500F764AB /* Assets.xcassets in Resources */,
 				C4DC3246223F362400F764AB /* Main.storyboard in Resources */,

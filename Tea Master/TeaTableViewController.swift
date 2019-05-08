@@ -56,8 +56,6 @@ class TeaTableViewController: UITableViewController {
     }
     
     func loadUserTeas() {
-        let token: String? = KeychainWrapper.standard.string(forKey: "token")
-        
         let teasQuery = GetUserTeasQuery()
         
         apollo.fetch(query: teasQuery) { [weak self] result, error in
@@ -70,7 +68,7 @@ class TeaTableViewController: UITableViewController {
                 }
                 return
             }
-            self?.teas = teas.map { Tea(brand: $0.brand, name: $0.name, type: TeaType(rawValue: $0.type)!, isPublic: false, rating: 3.0)! }
+            self?.teas = teas.map { Tea(brand: $0.brand, name: $0.name, type: TeaType(rawValue: $0.type)!, isPublic: false, rating: $0.rating)! }
             self?.tableView.reloadData()
         }
     }
@@ -160,6 +158,8 @@ class TeaTableViewController: UITableViewController {
             let newIndexPath = IndexPath(row: teas.count, section: 0)
             teas.append(tea)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
+        } else {
+            print("Something broke :(")
         }
     }
 

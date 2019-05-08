@@ -8,15 +8,21 @@
 
 import UIKit
 import Eureka
+import Apollo
 
 class NewTeaViewController: FormViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     var tea: Tea?
     var validationFlags = 0b000
     
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    var apollo: ApolloClient!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        
+        apollo = delegate.apollo
         let types = [ TeaType.black.rawValue, TeaType.green.rawValue, TeaType.white.rawValue, TeaType.tisane.rawValue, TeaType.other.rawValue ]
         
         saveButton.isEnabled = false
@@ -96,11 +102,23 @@ class NewTeaViewController: FormViewController {
         let brand = formValues["teaBrand"] as! String
         let name = formValues["teaName"] as! String
         let type = formValues["teaType"] as! String
-        let isPublic = formValues["isPublicTea"] as! Bool
+        var isPublic: Bool!
+        
+        if(formValues["isPublicTea"] as? Bool != nil) {
+            isPublic = formValues["isPublicTea"] as? Bool
+        } else {
+            isPublic = false
+        }
         let rating = 0.0
         
+        apollo.perform(mutation: PostTeaMutation(brand: brand, name: name, type: type, isPublic: isPublic)) { (result, error) in
+            if let error = error {
+                print("Cannot post tea :( \(error)")
+            }
+            
+        }
+        
         tea = Tea(brand: brand, name: name, type: TeaType(rawValue: type)!, isPublic: isPublic, rating: rating)
-        //  Post to backend
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {
