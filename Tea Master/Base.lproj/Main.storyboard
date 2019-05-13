@@ -266,7 +266,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEi-Ue-KiK" customClass="CosmosView" customModule="Tea_Master" customModuleProvider="target">
                                 <rect key="frame" x="184" y="17.5" width="120" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -378,6 +378,9 @@
                     <navigationItem key="navigationItem" title="Brew" id="fLU-Fx-uEc">
                         <barButtonItem key="rightBarButtonItem" image="Nav Settings" id="XCg-kv-WA5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="sUs-3w-Wvq" kind="presentation" id="90d-mR-mAd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -393,26 +396,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2u9-j5-ZyL">
-                                <rect key="frame" x="138" y="274" width="44" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF4-aV-KXQ">
+                                <rect key="frame" x="0.0" y="119.5" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKW-tJ-22t">
+                                <rect key="frame" x="143" y="362" width="34" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.4549019608" green="0.69803921570000005" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleTimer:" destination="YOS-Wj-9xq" eventType="touchUpInside" id="nW1-Mt-lD1"/>
+                                </connections>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7P-gU-4X7">
+                                <rect key="frame" x="94.5" y="202.5" width="131.5" height="50.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmX-iG-7rB">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="50.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="dbH-Ws-krX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-dB-fdA">
+                                        <rect key="frame" x="60" y="0.0" width="11.5" height="50.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWj-ez-0nB">
+                                        <rect key="frame" x="71.5" y="0.0" width="60" height="50.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="P3A-xG-NGi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r7P-gU-4X7" firstAttribute="centerY" secondItem="yLX-Ub-ALa" secondAttribute="centerY" id="6p8-51-gPj"/>
+                            <constraint firstItem="LKW-tJ-22t" firstAttribute="centerX" secondItem="yLX-Ub-ALa" secondAttribute="centerX" id="Awk-AK-OoF"/>
+                            <constraint firstItem="r7P-gU-4X7" firstAttribute="centerX" secondItem="yLX-Ub-ALa" secondAttribute="centerX" id="QhU-kQ-cPD"/>
+                            <constraint firstItem="dF4-aV-KXQ" firstAttribute="width" secondItem="2vU-uQ-T2l" secondAttribute="width" id="Vii-GM-FSm"/>
+                            <constraint firstItem="dF4-aV-KXQ" firstAttribute="centerX" secondItem="yLX-Ub-ALa" secondAttribute="centerX" id="bFf-ca-qDG"/>
+                            <constraint firstItem="LKW-tJ-22t" firstAttribute="top" secondItem="dF4-aV-KXQ" secondAttribute="bottom" constant="26.5" id="ePe-Js-CDZ"/>
+                            <constraint firstItem="dF4-aV-KXQ" firstAttribute="centerY" secondItem="yLX-Ub-ALa" secondAttribute="centerY" id="eno-Is-gdQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yLX-Ub-ALa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="PVH-Se-aEB">
                         <barButtonItem key="rightBarButtonItem" image="Nav Settings" id="rcu-Mu-03f">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="sUs-3w-Wvq" kind="presentation" id="aAs-g8-iW7"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="minsLabel" destination="fmX-iG-7rB" id="kcT-RA-xbd"/>
+                        <outlet property="secsLabel" destination="vWj-ez-0nB" id="rcs-l0-Smi"/>
+                        <outlet property="timerButton" destination="LKW-tJ-22t" id="9zB-If-6BQ"/>
+                        <outlet property="timerLabel" destination="r7P-gU-4X7" id="i9B-U6-ffn"/>
+                        <outlet property="timerPicker" destination="dF4-aV-KXQ" id="9lz-o2-bxi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DCO-x0-Ptk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="1634"/>
+            <point key="canvasLocation" x="1432.5" y="1633.0985915492959"/>
         </scene>
         <!--Settings-->
         <scene sceneID="4xW-GN-M8U">
@@ -583,6 +639,7 @@
         <image name="Tab Timer" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aAs-g8-iW7"/>
         <segue reference="WNo-Rx-FuL"/>
     </inferredMetricsTieBreakers>
 </document>

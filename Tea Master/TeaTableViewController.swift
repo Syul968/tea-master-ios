@@ -159,7 +159,7 @@ class TeaTableViewController: UITableViewController {
             teas.append(tea)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         } else {
-            print("Something broke :(")
+            print("Something broke while at table view :(")
         }
     }
 
