@@ -4,7 +4,7 @@ import Apollo
 
 public final class GetUserTeasQuery: GraphQLQuery {
   public let operationDefinition =
-    "query GetUserTeas {\n  userTeas {\n    __typename\n    brand\n    name\n    type\n    rating\n    isPublic\n  }\n}"
+    "query GetUserTeas {\n  userTeas {\n    __typename\n    id\n    brand\n    name\n    type\n    rating\n    isPublic\n  }\n}"
 
   public init() {
   }
@@ -40,6 +40,7 @@ public final class GetUserTeasQuery: GraphQLQuery {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("brand", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("type", type: .nonNull(.scalar(String.self))),
@@ -53,8 +54,8 @@ public final class GetUserTeasQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(brand: String, name: String, type: String, rating: Double, isPublic: Bool? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Tea", "brand": brand, "name": name, "type": type, "rating": rating, "isPublic": isPublic])
+      public init(id: GraphQLID, brand: String, name: String, type: String, rating: Double, isPublic: Bool? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Tea", "id": id, "brand": brand, "name": name, "type": type, "rating": rating, "isPublic": isPublic])
       }
 
       public var __typename: String {
@@ -63,6 +64,15 @@ public final class GetUserTeasQuery: GraphQLQuery {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 
@@ -160,7 +170,7 @@ public final class LoginMutation: GraphQLMutation {
 
 public final class PostTeaMutation: GraphQLMutation {
   public let operationDefinition =
-    "mutation PostTea($brand: String!, $name: String!, $type: String!, $isPublic: Boolean!) {\n  postTea(brand: $brand, name: $name, type: $type, isPublic: $isPublic) {\n    __typename\n    brand\n    name\n    type\n    rating\n    isPublic\n  }\n}"
+    "mutation PostTea($brand: String!, $name: String!, $type: String!, $isPublic: Boolean!) {\n  postTea(brand: $brand, name: $name, type: $type, isPublic: $isPublic) {\n    __typename\n    id\n    brand\n    name\n    type\n    rating\n    isPublic\n  }\n}"
 
   public var brand: String
   public var name: String
@@ -209,6 +219,7 @@ public final class PostTeaMutation: GraphQLMutation {
 
       public static let selections: [GraphQLSelection] = [
         GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
+        GraphQLField("id", type: .nonNull(.scalar(GraphQLID.self))),
         GraphQLField("brand", type: .nonNull(.scalar(String.self))),
         GraphQLField("name", type: .nonNull(.scalar(String.self))),
         GraphQLField("type", type: .nonNull(.scalar(String.self))),
@@ -222,8 +233,8 @@ public final class PostTeaMutation: GraphQLMutation {
         self.resultMap = unsafeResultMap
       }
 
-      public init(brand: String, name: String, type: String, rating: Double, isPublic: Bool? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Tea", "brand": brand, "name": name, "type": type, "rating": rating, "isPublic": isPublic])
+      public init(id: GraphQLID, brand: String, name: String, type: String, rating: Double, isPublic: Bool? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Tea", "id": id, "brand": brand, "name": name, "type": type, "rating": rating, "isPublic": isPublic])
       }
 
       public var __typename: String {
@@ -232,6 +243,15 @@ public final class PostTeaMutation: GraphQLMutation {
         }
         set {
           resultMap.updateValue(newValue, forKey: "__typename")
+        }
+      }
+
+      public var id: GraphQLID {
+        get {
+          return resultMap["id"]! as! GraphQLID
+        }
+        set {
+          resultMap.updateValue(newValue, forKey: "id")
         }
       }
 

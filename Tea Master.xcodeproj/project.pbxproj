@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41A7C7E228A33F300985BD5 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C41A7C7D228A33F300985BD5 /* schema.json */; };
 		C41CD711227124A2006CD806 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41CD710227124A2006CD806 /* Eureka.framework */; };
 		C41CD7122271253A006CD806 /* Apollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C498C657226FA9670027B6D0 /* Apollo.framework */; };
 		C43722BD227BED0400D3015E /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43722BC227BED0400D3015E /* SwiftKeychainWrapper.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C41A7C7D228A33F300985BD5 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		C41CD710227124A2006CD806 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
 		C43722BC227BED0400D3015E /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftKeychainWrapper.framework; path = Carthage/Build/iOS/SwiftKeychainWrapper.framework; sourceTree = "<group>"; };
 		C443FD75225E9DCA0079BD05 /* BrewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 		C4DC323F223F362400F764AB /* Tea Master */ = {
 			isa = PBXGroup;
 			children = (
+				C41A7C7D228A33F300985BD5 /* schema.json */,
 				C498C65D2270C7D20027B6D0 /* Tea.graphql */,
 				C498C65F2270C8060027B6D0 /* API.swift */,
 				C4DC3240223F362400F764AB /* AppDelegate.swift */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */,
+				C41A7C7E228A33F300985BD5 /* schema.json in Resources */,
 				C4DC324B223F362500F764AB /* LaunchScreen.storyboard in Resources */,
 				C4DC3248223F362500F764AB /* Assets.xcassets in Resources */,
 				C4DC3246223F362400F764AB /* Main.storyboard in Resources */,

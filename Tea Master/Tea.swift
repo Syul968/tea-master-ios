@@ -16,7 +16,11 @@ enum TeaType: String {
     case other = "Other"
 }
 
-class Tea {
+class Tea: Equatable {
+    static func == (lhs: Tea, rhs: Tea) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
+    
     var id: String?
     var brand: String
     var name: String
@@ -24,7 +28,7 @@ class Tea {
     var isPublic: Bool
     var rating: Double
     
-    init?(brand: String, name: String, type: TeaType, isPublic: Bool, rating: Double) {
+    init?(id: String?, brand: String, name: String, type: TeaType, isPublic: Bool, rating: Double) {
         if(brand.isEmpty) {
             return nil
         }
@@ -32,6 +36,7 @@ class Tea {
             return nil
         }
         
+        self.id = id
         self.brand = brand
         self.name = name
         self.type = type

@@ -118,7 +118,7 @@ class NewTeaViewController: FormViewController {
             
         }
         
-        tea = Tea(brand: brand, name: name, type: TeaType(rawValue: type)!, isPublic: isPublic, rating: rating)
+        tea = Tea(id: nil, brand: brand, name: name, type: TeaType(rawValue: type)!, isPublic: isPublic, rating: rating)
     }
     
     @IBAction func cancel(_ sender: UIBarButtonItem) {

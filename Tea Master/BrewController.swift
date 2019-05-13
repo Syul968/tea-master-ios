@@ -10,21 +10,31 @@ import UIKit
 import Eureka
 
 class BrewController: FormViewController {
-    var userTeas: [String] = []
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    var userTeas: [Tea]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDummyUserTeas()
+        
+        userTeas = delegate.userTeas
         buildForm()
     }
     
     func buildForm() {
         form +++ Section("Tea")
             
-            <<< PushRow<String>() { row in
+            <<< PushRow<Tea>() { row in
                 row.tag = "tea"
                 row.title = "Tea"
-                row.options = userTeas.map { $0 }
+                row.options = userTeas
+                
+                row.displayValueFor = {
+                    return "\($0?.name ?? "")"
+                }
+                
+                row.onChange { selected in
+                    print("Selected tea: \(selected.value!.name)")
+                }
         }
         
         +++ Section("Brew")
@@ -79,17 +89,6 @@ class BrewController: FormViewController {
             }.cellSetup { cell, row in
                 cell.textLabel?.textColor = UIColor(hex: 0x74B24B)
         }
-    }
-    
-    func loadDummyUserTeas() {
-        userTeas.append("English Breakfast")
-        userTeas.append("Earl Grey")
-        userTeas.append("Keemun")
-        userTeas.append("Another dummy")
-    }
-    
-    func loadUserTeas() {
-        
     }
     
 }

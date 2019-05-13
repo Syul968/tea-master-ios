@@ -1,5 +1,6 @@
 query GetUserTeas {
     userTeas {
+        id
         brand
         name
         type
@@ -14,6 +15,7 @@ mutation Login($user: String!, $password: String!) {
 
 mutation PostTea($brand: String!, $name: String!, $type: String!, $isPublic: Boolean!) {
     postTea(brand: $brand, name: $name, type: $type, isPublic: $isPublic) {
+        id
         brand
         name
         type

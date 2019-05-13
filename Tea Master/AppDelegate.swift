@@ -14,6 +14,7 @@ import SwiftKeychainWrapper
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var apollo: ApolloClient!
     var window: UIWindow?
+    var userTeas: [Tea]!
     
     func updateApolloClient(token: String?) {
         let configuration = URLSessionConfiguration .default

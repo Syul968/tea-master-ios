@@ -12,13 +12,11 @@ import SwiftKeychainWrapper
 
 class TeaTableViewController: UITableViewController {
     let delegate = UIApplication.shared.delegate as! AppDelegate
-    var apollo: ApolloClient!
-    var teas = [Tea]()
+    var teas: [Tea]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apollo = delegate.apollo
-        loadUserTeas()
+        teas = delegate.userTeas
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -40,37 +38,19 @@ class TeaTableViewController: UITableViewController {
     }
     
     private func loadSampleTeas() {
-        guard let tea1 = Tea(brand: "Whittard", name: "Tippy Assam", type: .black, isPublic: false, rating: 4.5) else {
+        guard let tea1 = Tea(id: nil, brand: "Whittard", name: "Tippy Assam", type: .black, isPublic: false, rating: 4.5) else {
             fatalError("Unable to initialize tea1")
         }
         
-        guard let tea2 = Tea(brand: "Fortnum & Mason", name: "Jubilee", type: .black, isPublic: false, rating: 3.5) else {
+        guard let tea2 = Tea(id: nil, brand: "Fortnum & Mason", name: "Jubilee", type: .black, isPublic: false, rating: 3.5) else {
             fatalError("Unable to initialize tea2")
         }
         
-        guard let tea3 = Tea(brand: "Whittard", name: "Cherry Blossom", type: .green, isPublic: false, rating: 3.0) else {
+        guard let tea3 = Tea(id: nil, brand: "Whittard", name: "Cherry Blossom", type: .green, isPublic: false, rating: 3.0) else {
             fatalError("Unable to initialize tea3")
         }
         
         teas += [tea1, tea2, tea3]
-    }
-    
-    func loadUserTeas() {
-        let teasQuery = GetUserTeasQuery()
-        
-        apollo.fetch(query: teasQuery) { [weak self] result, error in
-            guard let teas = result?.data?.userTeas else {
-                print("Apollo fetch guard failed")
-                if(result != nil) {
-                    print(result!)
-                } else {
-                    print(">>> ERROR: \(error!)")
-                }
-                return
-            }
-            self?.teas = teas.map { Tea(brand: $0.brand, name: $0.name, type: TeaType(rawValue: $0.type)!, isPublic: false, rating: $0.rating)! }
-            self?.tableView.reloadData()
-        }
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -157,6 +137,7 @@ class TeaTableViewController: UITableViewController {
         if let source = sender.source as? NewTeaViewController, let tea = source.tea {
             let newIndexPath = IndexPath(row: teas.count, section: 0)
             teas.append(tea)
+            delegate.userTeas = teas
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         } else {
             print("Something broke while at table view :(")
