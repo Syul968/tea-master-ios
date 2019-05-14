@@ -29,14 +29,18 @@ class TeaViewController: UIViewController {
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func brew(_ sender: Any) {
+        let tabController = self.tabBarController
+        tabController?.selectedIndex = 1
+        let navController = tabController?.viewControllers![1] as! UINavigationController
+        let brewController = navController.topViewController as! BrewController
+        
+        brewController.tea = tea
     }
-    */
-
+    
+    
 }

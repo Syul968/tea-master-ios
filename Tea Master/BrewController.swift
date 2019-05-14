@@ -12,12 +12,20 @@ import Eureka
 class BrewController: FormViewController {
     let delegate = UIApplication.shared.delegate as! AppDelegate
     var userTeas: [Tea]!
+    var tea: Tea?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userTeas = delegate.userTeas
         buildForm()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print("Brew view appeared")
+        let teaRow = self.form.rowBy(tag: "tea")
+        teaRow!.updateCell()
+        teaRow!.reload()
     }
     
     func buildForm() {
@@ -35,7 +43,11 @@ class BrewController: FormViewController {
                 row.onChange { selected in
                     print("Selected tea: \(selected.value!.name)")
                 }
-        }
+            }.cellUpdate { cell, row in
+                if(self.tea != nil) {
+                    row.value = self.tea
+                }
+            }
         
         +++ Section("Brew")
         
@@ -71,9 +83,11 @@ class BrewController: FormViewController {
                 row.secondOptions = { _ in return Array(0...9) }
             }
         
-            <<< LabelRow() { row in
+            <<< PushRow<Float>() { row in
                 row.tag = "brewRating"
-                row.title = "0 Stars"
+                row.title = "Rating"
+                
+                row.options = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
             }
         
             <<< TextAreaRow() { row in
@@ -86,9 +100,18 @@ class BrewController: FormViewController {
             <<< ButtonRow() { row in
                 row.tag = "saveBrew"
                 row.title = "Brew"
+                
+                row.onCellSelection(self.brew)
             }.cellSetup { cell, row in
                 cell.textLabel?.textColor = UIColor(hex: 0x74B24B)
         }
+    }
+    
+    func brew(button: ButtonCellOf<String>, row: ButtonRowOf<String>) {
+        let alert = UIAlertController(title: "Saved", message: "Your brew was saved!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
 }
