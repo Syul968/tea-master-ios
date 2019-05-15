@@ -21,6 +21,7 @@
 		C4507B2B2267F78F00948ECA /* TeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4507B2A2267F78F00948ECA /* TeaViewController.swift */; };
 		C4507B2E22680CC500948ECA /* UIColor+HexInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4507B2D22680CC500948ECA /* UIColor+HexInit.swift */; };
 		C45FF52922693F7A00FBD4DD /* NewTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */; };
+		C47E5287228CA35C0033EAC9 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47E5286228CA35C0033EAC9 /* SignupViewController.swift */; };
 		C498C65E2270C7D20027B6D0 /* Tea.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C498C65D2270C7D20027B6D0 /* Tea.graphql */; };
 		C498C6602270C8060027B6D0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C498C65F2270C8060027B6D0 /* API.swift */; };
 		C49BCA4A227D459B008C8BD4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */; };
@@ -59,6 +60,7 @@
 		C4507B2A2267F78F00948ECA /* TeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaViewController.swift; sourceTree = "<group>"; };
 		C4507B2D22680CC500948ECA /* UIColor+HexInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HexInit.swift"; sourceTree = "<group>"; };
 		C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeaViewController.swift; sourceTree = "<group>"; };
+		C47E5286228CA35C0033EAC9 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		C498C657226FA9670027B6D0 /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
 		C498C65D2270C7D20027B6D0 /* Tea.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tea.graphql; sourceTree = "<group>"; };
 		C498C65F2270C8060027B6D0 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				C4DC3244223F362400F764AB /* Main.storyboard */,
 				C49BCA49227D459B008C8BD4 /* SettingsViewController.swift */,
 				C4FF83C322710A2E00ECE179 /* LoginViewController.swift */,
+				C47E5286228CA35C0033EAC9 /* SignupViewController.swift */,
 				C4DC3242223F362400F764AB /* AuthwallViewController.swift */,
 				C45FF52822693F7A00FBD4DD /* NewTeaViewController.swift */,
 				C4507B2A2267F78F00948ECA /* TeaViewController.swift */,
@@ -286,6 +289,7 @@
 				C4DC3241223F362400F764AB /* AppDelegate.swift in Sources */,
 				C49BCA4A227D459B008C8BD4 /* SettingsViewController.swift in Sources */,
 				C443FD78225E9E010079BD05 /* TimerController.swift in Sources */,
+				C47E5287228CA35C0033EAC9 /* SignupViewController.swift in Sources */,
 				C498C6602270C8060027B6D0 /* API.swift in Sources */,
 				C443FD81225EB6700079BD05 /* Tea.swift in Sources */,
 				C443FD83225EBB220079BD05 /* TeaTableViewController.swift in Sources */,
